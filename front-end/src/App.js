@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import OrderSucess from "./components/OrderSucess";
-import { HeaderGrid, MainGrid} from "./components/Styled";
+import { HeaderBox, HeaderGrid, MainGrid, SubtitleHeader, TitleHeader} from "./components/Styled";
 import { BASE_URL } from "./constants";
 import OrderSummary from "./screens/OrderSummary";
 import PizzasMenu from "./screens/PizzasMenu";
-import Logo from "./assets/Logo.png";
+
 function App() {
   const [ cart, setCart ] = useState([])
   const [ total, setTotal ] = useState(0)
@@ -24,29 +24,28 @@ function App() {
   }, [cart])
 
   const addToCart = (pizzaToAdd) => {
-      
-      const foundIndex = cart.findIndex((pizzaInCart) => {
-          return pizzaInCart.name === pizzaToAdd.name
-      })
+    const foundIndex = cart.findIndex((pizzaInCart) => {
+        return pizzaInCart.name === pizzaToAdd.name
+    })
 
-      if (foundIndex >= 0) {
-          const newCart = [...cart]
-          newCart[foundIndex].quantity += 1
+    if (foundIndex >= 0) {
+        const newCart = [...cart]
+        newCart[foundIndex].quantity += 1
 
-          setCart(newCart)
-      } else {
-          const newCart = [...cart]
-          const newPizza = {
-              name: pizzaToAdd.name,
-              price: pizzaToAdd.price,
-              quantity: 1
-          }
+        setCart(newCart)
+    } else {
+        const newCart = [...cart]
+        const newPizza = {
+            name: pizzaToAdd.name,
+            price: pizzaToAdd.price,
+            quantity: 1
+        }
 
-          newCart.push(newPizza)
+        newCart.push(newPizza)
 
-          setCart(newCart)
-      }
-  }
+        setCart(newCart)
+    }
+}
 
   const removeFromCart = (pizzaToRemove) => {
 
@@ -112,7 +111,10 @@ function App() {
   return (
     <div>
       <HeaderGrid>
-        <img src={Logo} />
+        <HeaderBox>
+       <TitleHeader>Pizzaria</TitleHeader>
+       <SubtitleHeader>A autêntica pizza italiana</SubtitleHeader>
+       </HeaderBox>
       </HeaderGrid>
 
       <MainGrid>

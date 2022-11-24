@@ -14,11 +14,11 @@ Content-Type: application/json
 {
     "pizzas": [
         {
-            "name": "Margherita",
+            "name": "Africana",
             "quantity": 10
         },
         {
-            "name": "Bufala",
+            "name": "Cebolinha",
             "quantity": 10
         }
     ]

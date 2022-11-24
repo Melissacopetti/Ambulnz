@@ -1,16 +1,15 @@
 import styled from "styled-components";
 
 export const CardLista = styled.div`
-border:solid red 5px;
-border-radius:20px;
-width:700px;
+  border: solid red 5px;
+  border-radius: 20px;
+  width: 700px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   padding: 3rem;
-  margin:0.5px 80px ;
-  background-color:black;
-
+  margin: 0.5px 80px;
+  background-color: black;
 `;
 
 export const CardA = styled.div`
@@ -25,7 +24,7 @@ export const CardA = styled.div`
   height: 150px;
   width: 600px;
   min-width: 250px;
-  padding: 1.5rem;
+  padding: 50px;
   border-radius: 16px;
   color: white;
   box-shadow: -1rem 0 3rem #000;
@@ -33,6 +32,7 @@ export const CardA = styled.div`
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   transition: 0.2s;
+  overflow:scroll-behavior;
   :hover {
     transform: translateY(-1rem);
     :not(:first-child) {
@@ -78,10 +78,10 @@ export const Button = styled.button`
 export const CardCart = styled.div`
   width: 400px;
   height: 400px;
-  display:flex;
-  flex-direction:column;
-margin:100px;
-  position:center;
+  display: flex;
+  flex-direction: column;
+  margin: 100px 50px 10px 20px;
+  position: center;
   border-radius: 20px;
   background: #f5f5f5;
   position: relative;
@@ -100,8 +100,6 @@ export const CardDetails = styled.div`
   height: 100%;
   gap: 0.5em;
   display: grid;
- 
-
 `;
 
 export const CardButton = styled.button`
@@ -127,10 +125,10 @@ export const CardButton = styled.button`
 `;
 
 export const TextBody = styled.h3`
-  color:#696969;
-  display:flex;
-flex-direction:column;
-justify-content:space-around;
+  color: #696969;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 `;
 
 /*Text*/
@@ -141,60 +139,71 @@ export const Text = styled.h1`
 `;
 
 export const ButtonRemove = styled.button`
-width:90px;
- border-radius: 1rem;
+  width: 90px;
+  border-radius: 1rem;
   border: none;
   background-color: #ff2400;
   color: #fff;
   /* padding: 0.5rem 1rem; */
   position: absolute;
-  margin:0;
-`
-
+  margin: 0;
+`;
 
 export const HeaderGrid = styled.header`
-grid-column-end:2;
-grid-column-start: 1;
-grid-row-start:row 1 start;
-grid-row-end:2;
-`
+  display: flex;
+  background-color: #800000;
+`;
+export const TitleHeader = styled.h1`
+  font-family: "Pacifico", cursive;
+  color: gold;
+  font-size: 100px;
+  letter-spacing: 15px;
+  
+`;
+
 export const MainGrid = styled.main`
-display:grid;
-grid-template-columns:1fr 1fr;
-`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`;
 
 export const TitleMenu = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  margin-left: 300px;
+  margin-top: 60px;
+  width: 300px;
+  border-radius: 30px;
+  border: 8px double green;
+`;
+export const TitleH1 = styled.h1`
+  position: relative;
+  font-family: "DM Serif Display", serif;
+  letter-spacing: 2.5px;
+  color: white;
+  padding: 2px 50px 2px 90px;
+`;
+export const TicketPrice = styled.div`
+  width: 350px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative !important;
+  background: red;
+  padding: 10px 8px;
+  margin-right: 90px;
+`;
+export const SubtitleHeader = styled.h2`
+  font-family: "DM Serif Display", serif;
+  color: white;
+  font-size: 30px;
+  margin: -20px 30px 50px 30px;
+`;
+
+export const HeaderBox = styled.div`
 display:flex;
+flex-direction:column;
 align-items:center;
 justify-content:center;
-background-color:black;
-margin-left:300px;
-margin-top:60px;
-width:300px;
-border-radius:30px;
-border: 8px double green;
-
 `
-export const TitleH1 = styled.h1`
-position: relative;
-font-family: "DM Serif Display", serif;
-letter-spacing: 2.5px;
-color:white;
-padding: 2px 50px 2px 90px;
-`
-export const TicketPrice = styled.div`
-width:350px;
-height:50px;
-    font-size: 20px;
-    font-weight: bold;
-    position: relative !important;
-    background: red;
-    padding: 10px 8px;
-   margin-right:90px;
-
-
-
-`
-
-
-
